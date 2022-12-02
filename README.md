@@ -7,3 +7,5 @@ https://adventofcode.com
 - [x] [Day 2: Dive!](https://adventofcode.com/2021/day/2)
 - [x] [Day 3: Binary Diagnostic](https://adventofcode.com/2021/day/3)
   
+## Year 2022
+- [ ] [Day 1: Calorie Counting](https://adventofcode.com/2022/day/1)

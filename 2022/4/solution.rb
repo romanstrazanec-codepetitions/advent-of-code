@@ -1,9 +1,11 @@
 #!/usr/bin/ruby
 # frozen_string_literal: true
 
+require 'set'
+
 def to_range(elf)
   from, to = elf.split('-')
-  from..to
+  (from..to).to_set
 end
 
 def to_pair(pair)
@@ -43,9 +45,9 @@ end
 
 def solution(filename)
   File.read(filename).split("\n").sum do |line|
-    elf1, elf2 = to_pair(line)
-    elf1.cover?(elf2) || elf2.cover?(elf1) ? 1 : 0
+    yield(to_pair(line)) ? 1 : 0
   end
 end
 
-puts solution 'input.txt'
+puts solution('input.txt') { |(elf1, elf2)| elf1.subset?(elf2) || elf2.subset?(elf1) }
+puts solution('input.txt') { |(elf1, elf2)| elf1.intersect?(elf2) }

@@ -40,6 +40,7 @@ For example, suppose the Elves finish writing their items' Calories and end up w
 ```
 
 This list represents the Calories of the food carried by five Elves:
+
 - The first Elf is carrying food with `1000`, `2000`, and `3000` Calories, a total of **6000** Calories.
 - The second Elf is carrying one food item with **`4000`** Calories.
 - The third Elf is carrying food with `5000` and `6000` Calories, a total of **11000** Calories.
@@ -65,3 +66,39 @@ In the example above, the top three Elves are the fourth Elf (with 24000 Calorie
 Calories), then the fifth Elf (with 10000 Calories). The sum of the Calories carried by these three elves is **45000**.
 
 Find the top three Elves carrying the most Calories. **How many Calories are those Elves carrying in total?**
+
+## Other solutions
+
+### CJ Avilla
+
+- [Gist](https://gist.github.com/cjavdev/acd047fe1c04104665a8e3225998b2a3)
+- [Youtube](https://youtu.be/ooqgY9yVbPc)
+
+```ruby
+# data = DATA.readlines
+data = File.readlines(ARGV.first)
+
+p data
+    .map(&:chomp)
+    .chunk_while { _2 != "" }
+    .map { _1.map(&:to_i) }
+    .map(&:sum)
+    .sort[-3..]
+    .sum
+
+__END__
+1000
+2000
+3000
+
+4000
+
+5000
+6000
+
+7000
+8000
+9000
+
+10000
+```

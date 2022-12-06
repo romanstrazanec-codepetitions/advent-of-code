@@ -15,4 +15,4 @@ https://adventofcode.com
 - [x] [Day 3: Rucksack Reorganization](https://adventofcode.com/2022/day/3)
 - [x] [Day 4: Camp Cleanup](https://adventofcode.com/2022/day/4)
 - [x] [Day 5: Supply Stacks](https://adventofcode.com/2022/day/5)
-- [ ] [Day 6: Tuning Trouble](https://adventofcode.com/2022/day/6)
+- [x] [Day 6: Tuning Trouble](https://adventofcode.com/2022/day/6)
